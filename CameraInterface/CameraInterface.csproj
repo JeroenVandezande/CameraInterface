@@ -1,13 +1,30 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net9.0</TargetFramework>
+        <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Title>Camera Interface</Title>
+        <Authors>Jeroen Vandezande</Authors>
+        <Description>a small package that has a Camera Interface and also has a nice abstracted Image Buffer record.</Description>
+        <PackageTags>camera;image</PackageTags>
+        <PackageReleaseNotes>removed setter for ranges</PackageReleaseNotes>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <PackageId>CameraInterface</PackageId>
+        <Version>1.1.0</Version>
+        
     </PropertyGroup>
 
     <ItemGroup>
       <PackageReference Include="UnitsNet" Version="5.75.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="../README.md" Pack="true" PackagePath="" />
     </ItemGroup>
 
 </Project>
