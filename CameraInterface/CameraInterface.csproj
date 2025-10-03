@@ -9,14 +9,14 @@
         <Authors>Jeroen Vandezande</Authors>
         <Description>a small package that has a Camera Interface and also has a nice abstracted Image Buffer record.</Description>
         <PackageTags>camera;image</PackageTags>
-        <PackageReleaseNotes>removed setter for ranges</PackageReleaseNotes>
+        <PackageReleaseNotes>cleanup</PackageReleaseNotes>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
         <PackageId>CameraInterface</PackageId>
-        <Version>1.1.0</Version>
-        
+        <Version>1.3.0</Version>
+        <RepositoryUrl>https://github.com/JeroenVandezande/CameraInterface</RepositoryUrl>        
     </PropertyGroup>
 
     <ItemGroup>
