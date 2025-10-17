@@ -2,6 +2,26 @@ namespace CameraInterface;
 
 public static class ImageDataExtensions
 {
+    /// <summary>
+    /// Gets the number of bytes used per pixel for the specified <see cref="ImageFormat"/>.
+    /// </summary>
+    /// <param name="format">The image format.</param>
+    /// <returns>
+    /// The bytes per pixel: 1 for Mono8, 2 for Mono16, 3 for Rgb24/Bgr24, 4 for Mono32/Rgb32/Bgr32.
+    /// </returns>
+    /// <exception cref="NotSupportedException">Thrown if the format is not supported.</exception>
+    public static int BytesPerPixel(this ImageFormat format) => format switch
+    {
+        ImageFormat.Rgb32 => 4,
+        ImageFormat.Bgr32 => 4,
+        ImageFormat.Mono8 => 1,
+        ImageFormat.Mono16 => 2,
+        ImageFormat.Mono32 => 4,
+        ImageFormat.Rgb24 => 3,
+        ImageFormat.Bgr24 => 3,
+        _ => throw new NotSupportedException()
+    };
+    
     /// <summary>Horizontal concatenation (side-by-side). Requires the same height & format.</summary>
     public static ImageData ConcatHorizontal(this IReadOnlyList<ImageData> images)
     {

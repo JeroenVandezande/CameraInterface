@@ -35,26 +35,16 @@ public readonly record struct ImageData(
     /// <summary>
     /// The size in bytes of the serialization header that precedes the pixel payload.
     /// </summary>
-    private const int HeaderSize = 28;    
+    private const int HeaderSize = 28;
 
     /// <summary>
     /// Gets the number of bytes used per pixel based on the current <see cref="Format"/>.
     /// </summary>
     /// <returns>
-    /// The bytes per pixel: 1 for Mono8, 2 for Mono16, 3 for Rgb24, 4 for Mono32 and Rgb32.
+    /// The bytes per pixel: 1 for Mono8, 2 for Mono16, 3 for Rgb24 and Bgr24, 4 for Mono32, Bgr32 and Rgb32.
     /// </returns>
     /// <exception cref="NotSupportedException">Thrown if the format is not supported.</exception>
-    public int BytesPerPixel => Format switch
-    {
-        ImageFormat.Rgb32 => 4,
-        ImageFormat.Bgr32 => 4,
-        ImageFormat.Mono8 => 1,
-        ImageFormat.Mono16 => 2,
-        ImageFormat.Mono32 => 4,
-        ImageFormat.Rgb24 => 3,
-        ImageFormat.Bgr24 => 3,
-        _ => throw new NotSupportedException()
-    };
+    public int BytesPerPixel => Format.BytesPerPixel();
 
     /// <summary>
     /// Serializes the image data to a new byte array.
