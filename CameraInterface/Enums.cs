@@ -41,7 +41,20 @@ namespace CameraInterface
         /// Each pixel consists of four 8-bit channels, typically Red, Green, Blue, and Alpha (or padding).
         /// Uses 4 bytes per pixel.
         /// </summary>
-        Rgb32
+        Rgb32,
+
+        /// <summary>
+        /// 24-bit blue-green-red (BGR) format.
+        /// Each pixel is represented by three bytes: blue, green, and red, in that order.
+        /// Uses 3 bytes per pixel.
+        /// </summary>
+        Bgr24,
+
+        /// <summary>
+        /// 32-bit pixel format with blue, green, and red channels.
+        /// Each pixel is represented by four bytes arranged in BGR order, with the fourth byte typically reserved for alpha or padding.
+        /// Uses 4 bytes per pixel.
+        /// </summary>
+        Bgr32
     }
-    
 }

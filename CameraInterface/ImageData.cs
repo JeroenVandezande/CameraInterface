@@ -47,10 +47,12 @@ public readonly record struct ImageData(
     public int BytesPerPixel => Format switch
     {
         ImageFormat.Rgb32 => 4,
+        ImageFormat.Bgr32 => 4,
         ImageFormat.Mono8 => 1,
         ImageFormat.Mono16 => 2,
         ImageFormat.Mono32 => 4,
         ImageFormat.Rgb24 => 3,
+        ImageFormat.Bgr24 => 3,
         _ => throw new NotSupportedException()
     };
 
