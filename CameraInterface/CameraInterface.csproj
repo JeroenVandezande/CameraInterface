@@ -7,19 +7,21 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Title>Camera Interface</Title>
         <Authors>Jeroen Vandezande</Authors>
-        <Description>a small package that has a Camera Interface and also has a nice abstracted Image Buffer record.</Description>
+        <Description>a small package that has a Camera Interface.</Description>
         <PackageTags>camera;image</PackageTags>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
         <PackageId>CameraInterface</PackageId>
-        <Version>1.6.0</Version>
+        <Version>2.1.0</Version>
         <RepositoryUrl>https://github.com/JeroenVandezande/CameraInterface</RepositoryUrl>
-        <PackageReleaseNotes>Added extension method to get bytes per pixel</PackageReleaseNotes>
+        <PackageReleaseNotes>Fixed Namespace</PackageReleaseNotes>
+        <RootNamespace>DD42.Graphics.Camera</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="ImageData" Version="1.1.0" />
       <PackageReference Include="UnitsNet" Version="5.75.0" />
     </ItemGroup>
 

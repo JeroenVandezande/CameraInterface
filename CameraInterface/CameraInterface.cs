@@ -1,6 +1,7 @@
 using UnitsNet;
+using DD42.Graphics;
 
-namespace CameraInterface;
+namespace DD42.Graphics.Camera;
 
 /// <summary>
 /// Represents a configuration interface for camera triggering mechanisms. Classes or records
@@ -17,7 +18,7 @@ public interface ITriggerConfig
 /// is used. This configuration can be useful for cameras operating in free-run
 /// mode or scenarios where no explicit triggering mechanism is required.
 /// </summary>
-public sealed record NoTrigger()               : ITriggerConfig;
+public sealed record NoTrigger() : ITriggerConfig;
 
 /// <summary>
 /// Represents a trigger configuration that uses software-based triggering mechanisms.
